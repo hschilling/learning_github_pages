@@ -19,5 +19,6 @@ jobs:
         run: |
           git config --global user.name 'hschilling'
           git config --global user.email 'hschilling@nasa.gov'
+          git add .
           git commit -am "Update html"
           git push
