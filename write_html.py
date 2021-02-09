@@ -20,5 +20,5 @@ html = ```
 </html>
 ```
 
-with open('docs/new,html', 'w') as writer:
+with open('docs/new.html', 'w') as writer:
     writer.write(html)
