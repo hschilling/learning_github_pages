@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  updateGraphs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.8'
+
+      - name: Generate graphs
+        run: python write_html.py
+
+      - name: Update graphs
+        run: |
+          git config --global user.name 'hschilling'
+          git config --global user.email 'hschilling@nasa.gov'
+          git commit -am "Update html"
+          git push
