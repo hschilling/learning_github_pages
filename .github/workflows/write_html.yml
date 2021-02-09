@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   updateGraphs:
     runs-on: ubuntu-latest
