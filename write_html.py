@@ -1,4 +1,4 @@
-html = ```
+html = '''
 <!doctype html>
 
 <html lang="en">
@@ -18,7 +18,7 @@ html = ```
   action created !!!
 </body>
 </html>
-```
+'''
 
 with open('docs/new.html', 'w') as writer:
     writer.write(html)
